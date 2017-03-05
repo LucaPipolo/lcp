@@ -1,0 +1,28 @@
+{
+  "name": "lcp",
+  "description": "Luca Pipolo portfolio.",
+  "main": "index.html",
+  "authors": [
+    "Luca Pipolo <pipolo.luca@gmail.com>"
+  ],
+  "license": "GPL-2.0",
+  "homepage": "http://www.lucapipolo.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.min.js"
+      ]
+    }
+  }
+}

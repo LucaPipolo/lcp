@@ -1,0 +1,35 @@
+// =============================================================================
+// #site-wrapper
+// =============================================================================
+.site-wrapper {
+  position: relative;
+  max-width: $site-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// =============================================================================
+// #container
+// =============================================================================
+@mixin container() {
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+    padding: 0;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+.container {
+  @include container();
+}
