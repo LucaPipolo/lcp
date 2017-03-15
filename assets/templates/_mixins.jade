@@ -1,0 +1,21 @@
+mixin section(name, description)
+  section(class='section__#{name}')
+    .section__col--left
+      h1 #{name}
+      h2 #{description}
+    .section__col--right
+      case name
+        when 'intro'
+          include _section_intro
+        when 'expertise'
+          include _section_expertise
+        when 'skills'
+          include _section_skills
+        when 'education'
+          include _section_education
+        when 'profiles'
+          include _section_profiles
+        when 'portfolio'
+          include _section_portfolio
+        when 'contact'
+          include _section_contact

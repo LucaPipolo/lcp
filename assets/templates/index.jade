@@ -1,6 +1,15 @@
+include _mixins
 doctype
 html(lang='it')
   include _head
   body
+    include _header
+    +section('intro', 'All about me.')
+    +section('expertise', 'Batman would be jealous.')
+    +section('skills', 'Progress bars, anyone?')
+    +section('education', 'Yes. I have been around.')
+    +section('profiles', 'Busy as usual.')
+    +section('portfolio', 'Here it gets interesting.')
+    +section('contact', 'Call me, maybe.')
     //- JS
     include _js

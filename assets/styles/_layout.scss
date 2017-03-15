@@ -1,35 +1,69 @@
 // =============================================================================
-// #site-wrapper
+// # typography
 // =============================================================================
-.site-wrapper {
-  position: relative;
-  max-width: $site-width;
-  margin-right: auto;
-  margin-left: auto;
+* {
+  font-family: $primary-font;
+  font-weight: 400;
+}
+
+h1, h2 {
+  text-align: right;
+}
+
+h1 {
+  color: $gray-darker;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $gray-dark;
+  font-size: 14px;
+}
+
+a {
+  color: $red;
 }
 
 // =============================================================================
-// #container
+// # sections
 // =============================================================================
-@mixin container() {
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+section {
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $screen-sm-min) {
-    width: $container-sm;
-    padding: 0;
+    flex-direction: row;
   }
 
-  @media (min-width: $screen-md-min) {
-    width: $container-md;
+  &:nth-child(even) {
+    background-color: $gray;
   }
 
-  @media (min-width: $screen-lg-min) {
-    width: $container-lg;
+  &:nth-child(odd) {
+    background-color: darken($gray, 1%);
   }
 }
 
-.container {
-  @include container();
+.section__col {
+  &--left {
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) {
+      width: 30%;
+    }
+  }
+
+  &--right {
+    width: 100%;
+
+    @media (min-width: $screen-sm-min) {
+      width: 70%;
+    }
+  }
+}
+
+.section__col--left, .section__col--right {
+  padding: 60px;
 }
