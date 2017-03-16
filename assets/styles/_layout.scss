@@ -6,7 +6,7 @@
   font-weight: 400;
 }
 
-h1, h2, p, a {
+h1, h2, h3, p, a {
   font-size: 14px;
 }
 
@@ -34,6 +34,43 @@ a {
 p {
   color: $gray-dark;
   line-height: 22px;
+}
+
+// =============================================================================
+// # website title
+// =============================================================================
+.website__title {
+  h1 {
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: capitalize;
+
+    @media (max-width: $screen-md-max) {
+      margin: 0;
+    }
+  }
+
+  span {
+    display: block;
+    color: $orange;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+}
+
+.website__subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $screen-md-min) {
+    flex-direction: row;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }
 
 // =============================================================================
@@ -86,38 +123,6 @@ header {
 
     @media (min-width: $screen-md-min) {
       padding-top: 60px;
-    }
-
-    h1 {
-      margin-bottom: 0;
-      font-size: 40px;
-      font-weight: 400;
-      text-transform: capitalize;
-
-      @media (max-width: $screen-md-max) {
-        margin: 0;
-      }
-    }
-
-    span {
-      display: block;
-      color: $orange;
-      font-size: 50px;
-      text-transform: uppercase;
-    }
-  }
-
-  .header__subtitle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: $screen-md-min) {
-      flex-direction: row;
-    }
-
-    p {
-      font-size: 20px;
     }
   }
 
@@ -278,6 +283,13 @@ section {
 // =============================================================================
 // # contact
 // =============================================================================
+.section__contact {
+  .contact__details {
+    margin-bottom: 60px;
+    border-bottom: 2px solid $gray;
+  }
+}
+
 .contact__details {
   display: flex;
   flex-direction: column;
