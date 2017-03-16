@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+h1, h2, p, a {
+  font-size: 14px;
+}
+
 h1 {
   color: $gray-darker;
   font-size: 16px;
@@ -15,17 +19,15 @@ h1 {
 
 h2 {
   color: $gray-dark;
-  font-size: 14px;
 }
 
 h3 {
   color: $gray-darker;
-  font-size: 14px;
   font-weight: 600;
 }
 
 a {
-  color: $red;
+  color: $orange;
   text-decoration: none;
 }
 
@@ -99,7 +101,7 @@ header {
 
     span {
       display: block;
-      color: $red;
+      color: $orange;
       font-size: 50px;
       text-transform: uppercase;
     }
@@ -143,7 +145,7 @@ section {
     width: calc(100% - 60px);
 
     @media (min-width: $screen-md-min) {
-      width: 25%;
+      width: 20%;
     }
 
     h1, h2 {
@@ -159,7 +161,7 @@ section {
     width: calc(100% - 60px);
 
     @media (min-width: $screen-md-min) {
-      width: 75%;
+      width: 80%;
     }
   }
 }
@@ -199,7 +201,77 @@ section {
   }
 
   h1 {
-    color: $red;
+    color: $orange;
+  }
+}
+
+// =============================================================================
+// # experience & education
+// =============================================================================
+.section__experience .section__col--right {
+  padding-bottom: 0;
+}
+
+.section__education .section__col--right {
+  padding-top: 0;
+}
+
+.section__education .timeline__element:first-child {
+  padding-top: 60px;
+}
+
+.timeline {
+  padding-left: 30px;
+  border-left: 2px solid $gray;
+
+  @media (min-width: $screen-sm-min) {
+    margin-left: 20px;
+  }
+}
+
+.timeline__element {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+
+  @media (min-width: $screen-sm-min) {
+    flex-direction: row;
+  }
+}
+
+.timeline__point {
+  display: block;
+  position: relative;
+  left: -36px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $orange;
+
+  @media (min-width: $screen-sm-min) {
+    min-width: 10px;
+  }
+}
+
+.timeline__header {
+  min-width: 250px;
+  line-height: 10px;
+
+  time, h3 {
+    color: $gray-dark;
+    font-size: 10px;
+  }
+
+  h1, h2 {
+    line-height: 16px;
+  }
+}
+
+.timeline__content {
+  padding: 0 20px 0 0;
+
+  p {
+    margin: 0;
   }
 }
 
@@ -219,15 +291,11 @@ section {
   flex: 1 1 auto;
   flex-basis: calc(100% / 4);
 
-  p, a {
-    font-size: 14px;
-  }
-
   a {
     color: $gray-dark;
 
     &:hover {
-      color: $red;
+      color: $orange;
     }
   }
 }
@@ -262,7 +330,7 @@ section {
       &:hover {
         border: 2px solid $gray;
         background-color: $white;
-        color: $red;
+        color: $orange;
       }
     }
   }
