@@ -19,3 +19,20 @@ mixin section(name, description)
           include _section_portfolio
         when 'contact'
           include _section_contact
+
+mixin contact(...details)
+  .contact__details
+    each detail in details
+      .contact__detail
+        h3= detail.name
+        if detail.link == 'false'
+          p= detail.description
+        else
+          a(href='#{detail.link}')= detail.description
+          
+mixin socials(...socials)
+  ul.socials
+    each social in socials
+      li.social__element
+        a(href='#{social.url}', alt='#{social.name}', target='_blank')
+          i(class='icon-#{social.name}')

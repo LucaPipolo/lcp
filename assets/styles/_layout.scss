@@ -6,10 +6,6 @@
   font-weight: 400;
 }
 
-h1, h2 {
-  text-align: right;
-}
-
 h1 {
   color: $gray-darker;
   font-size: 16px;
@@ -22,27 +18,97 @@ h2 {
   font-size: 14px;
 }
 
+h3 {
+  color: $gray-darker;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 a {
   color: $red;
+  text-decoration: none;
+}
+
+p {
+  color: $gray-dark;
 }
 
 // =============================================================================
-// # sections
+// # header
 // =============================================================================
-section {
+header, section {
   display: flex;
   flex-direction: column;
 
   @media (min-width: $screen-sm-min) {
     flex-direction: row;
   }
+}
 
-  &:nth-child(even) {
+header {
+  height: 100vh;
+
+  .section__col--left {
+    background-color: $gray;
+
+    img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      border-radius: 50%;
+    }
+  }
+
+  .section__col--right {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 40px;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+
+    span {
+      display: block;
+      color: $red;
+      font-size: 50px;
+      text-transform: uppercase;
+    }
+  }
+
+  .header__subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .contact__details {
+    margin-top: auto;
+    border-top: 2px solid $gray;
+  }
+}
+
+// =============================================================================
+// # sections
+// =============================================================================
+section {
+  &:nth-child(even) .section__col--left {
+    background-color: darken($gray, 1%);
+  }
+
+  &:nth-child(odd) .section__col--left {
     background-color: $gray;
   }
 
-  &:nth-child(odd) {
-    background-color: darken($gray, 1%);
+  h1, h2 {
+    text-align: right;
   }
 }
 
@@ -66,4 +132,60 @@ section {
 
 .section__col--left, .section__col--right {
   padding: 60px;
+}
+
+// =============================================================================
+// # contact
+// =============================================================================
+.contact__details {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact__detail {
+  flex: 1 1 auto;
+  flex-basis: calc(100% / 4);
+
+  p, a {
+    font-size: 14px;
+  }
+
+  a {
+    color: $gray-dark;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+// =============================================================================
+// # socials
+// =============================================================================
+.socials {
+  display: flex;
+  margin: 0 0 0 auto;
+
+  list-style-type: none;
+
+  .social__element {
+    width: 38px;
+    height: 38px;
+    margin-right: 5px;
+
+    a {
+      display: block;
+      border: 2px solid $gray;
+      background-color: $gray;
+      color: $gray-dark;
+      line-height: 2.3;
+      text-align: center;
+
+      &:hover {
+        border: 2px solid $gray;
+        background-color: $white;
+        color: $red;
+      }
+    }
+  }
 }

@@ -33,6 +33,8 @@ linters:
     enabled: true
   SelectorDepth:
     enabled: true
+  SelectorFormat:
+    enabled: false
   Shorthand:
     enabled: true
   SingleLinePerSelector:
