@@ -31,6 +31,7 @@ a {
 
 p {
   color: $gray-dark;
+  line-height: 22px;
 }
 
 // =============================================================================
@@ -106,10 +107,6 @@ section {
   &:nth-child(odd) .section__col--left {
     background-color: $gray;
   }
-
-  h1, h2 {
-    text-align: right;
-  }
 }
 
 .section__col {
@@ -117,7 +114,11 @@ section {
     width: 100%;
 
     @media (min-width: $screen-sm-min) {
-      width: 30%;
+      width: 25%;
+    }
+
+    h1, h2 {
+      text-align: right;
     }
   }
 
@@ -125,13 +126,31 @@ section {
     width: 100%;
 
     @media (min-width: $screen-sm-min) {
-      width: 70%;
+      width: 75%;
     }
   }
 }
 
 .section__col--left, .section__col--right {
   padding: 60px;
+}
+
+// =============================================================================
+// # expertise
+// =============================================================================
+.section__expertise .section__col--right {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.expertise__element {
+  width: calc(100% / 3 - 40px);
+  margin: 10px 20px;
+
+  h1 {
+    color: $red;
+  }
 }
 
 // =============================================================================
