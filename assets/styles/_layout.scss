@@ -40,6 +40,12 @@ p {
 // # website title
 // =============================================================================
 .website__title {
+  text-align: center;
+
+  @media (min-width: $screen-md-min) {
+    text-align: left;
+  }
+
   h1 {
     margin-bottom: 0;
     font-size: 40px;
@@ -87,11 +93,9 @@ header, section {
 
 header {
   height: 100%;
-  text-align: center;
 
   @media (min-width: $screen-md-min) {
     height: 100vh;
-    text-align: left;
   }
 
   .section__col--left {
