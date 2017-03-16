@@ -34,7 +34,7 @@ mixin contact(...details)
         if detail.link == 'false'
           p= detail.description
         else
-          a(href='#{detail.link}')= detail.description
+          p #[a(href='#{detail.link}') #{detail.description}] 
           
 mixin socials(...socials)
   ul.socials
