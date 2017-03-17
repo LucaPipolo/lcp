@@ -26,6 +26,14 @@ mixin expertise(...elements)
       h1= element.title
       p= element.text
 
+mixin skills(...skills)
+  .skills
+    each skill in skills
+      .skills__element
+        h1 #[span #{skill.value}] #{skill.name}
+          .progress-bar
+            .progress-bar--filled(style="width: #{skill.value}")
+
 mixin timeline(...elements)
   .timeline
     each element in elements
