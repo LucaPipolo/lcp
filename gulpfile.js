@@ -273,7 +273,9 @@ gulp.task('cslint', function () {
         '$',
         'document',
         'window',
-        'google'
+        'google',
+        'ScrollReveal',
+        'sr'
       ]
     }))
     .pipe(cslint.format());

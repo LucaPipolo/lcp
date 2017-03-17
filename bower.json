@@ -17,12 +17,18 @@
   ],
   "dependencies": {
     "jquery": "^3.1.1",
-    "normalize-css": "^5.0.0"
+    "normalize-css": "^5.0.0",
+    "scrollreveal": "^3.3.4"
   },
   "overrides": {
     "jquery": {
       "main": [
-        "./dist/jquery.min.js"
+        "./dist/jquery.js"
+      ]
+    },
+    "scrollreveal": {
+      "main": [
+        "./dist/scrollreveal.min.js"
       ]
     },
     "normalize-css": {

@@ -40,7 +40,9 @@ p {
 // # website title
 // =============================================================================
 .website__title {
+  padding: 0 20px;
   text-align: center;
+  visibility: hidden;
 
   @media (min-width: $screen-md-min) {
     text-align: left;
@@ -69,6 +71,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  visibility: hidden;
 
   @media (min-width: $screen-md-min) {
     flex-direction: row;
@@ -112,7 +115,8 @@ header {
       height: 150px;
       margin: 20px auto;
       border-radius: 50%;
-
+      visibility: hidden;
+      
       @media (min-width: $screen-md-min) {
         width: 200px;
         height: 200px;
@@ -276,7 +280,12 @@ section {
   background-color: $gray;
 }
 
+.in-view {
+  transition: width 1.4s ease-in-out .5s;
+}
+
 .progress-bar--filled {
+  width: 0;
   height: 100%;
   background-color: $orange;
 }
@@ -358,12 +367,15 @@ section {
   .contact__details {
     margin-bottom: 60px;
     border-bottom: 2px solid $gray;
+    visibility: hidden;
   }
 }
 
 .contact__details {
   display: flex;
   flex-direction: column;
+  margin: 0 20px;
+  visibility: hidden;
 
   @media (min-width: $screen-sm-min) {
     flex-direction: row;
@@ -373,6 +385,7 @@ section {
 .contact__detail {
   flex: 1 1 auto;
   flex-basis: calc(100% / 4);
+  visibility: hidden;
 
   a {
     color: $gray-dark;
