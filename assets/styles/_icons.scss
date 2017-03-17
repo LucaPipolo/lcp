@@ -46,8 +46,16 @@
   content: '\f300';
 }
 
+.icon-gitlab::before {
+  content: '\f296';
+}
+
 .icon-linkedin::before {
   content: '\f318';
+}
+
+.icon-medium::before {
+  content: '\f23a';
 }
 
 .icon-skype::before {
