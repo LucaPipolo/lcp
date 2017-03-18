@@ -1,42 +1,4 @@
 // =============================================================================
-// # typography
-// =============================================================================
-* {
-  font-family: $primary-font;
-  font-weight: 400;
-}
-
-h1, h2, h3, p, a {
-  font-size: 14px;
-}
-
-h1 {
-  color: $gray-darker;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-h2 {
-  color: $gray-dark;
-}
-
-h3 {
-  color: $gray-darker;
-  font-weight: 600;
-}
-
-a {
-  color: $orange;
-  text-decoration: none;
-}
-
-p {
-  color: $gray-dark;
-  line-height: 22px;
-}
-
-// =============================================================================
 // # website title
 // =============================================================================
 .website__title {
@@ -116,7 +78,7 @@ header {
       margin: 20px auto;
       border-radius: 50%;
       visibility: hidden;
-      
+
       @media (min-width: $screen-md-min) {
         width: 200px;
         height: 200px;
@@ -191,11 +153,14 @@ section {
 // # intro
 // =============================================================================
 .section__intro {
-
   p {
-    line-height: 26px;
-    margin-left: 20px;
     margin-right: 20px;
+    margin-left: 20px;
+    line-height: 26px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -375,10 +340,12 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0 20px;
+  text-align: center;
   visibility: hidden;
 
   @media (min-width: $screen-sm-min) {
     flex-direction: row;
+    text-align: left;
   }
 }
 
