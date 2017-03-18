@@ -1,3 +1,8 @@
+# Force SSL connection
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]{3}$
+RewriteRule ^(.*)$ https://www.lucapipolo.com/$1 [R,L]
+
 # Rewrite requests for favicons and mobile app icons to site-specific directory.
 <IfModule mod_rewrite.c>
         RewriteEngine On
