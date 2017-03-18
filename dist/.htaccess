@@ -1,7 +1,9 @@
 # Force SSL connection
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]{3}$
-RewriteRule ^(.*)$ https://www.lucapipolo.com/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^(www\.)?lucapipolo\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,NE,R=301]
 
 # Rewrite requests for favicons and mobile app icons to site-specific directory.
 <IfModule mod_rewrite.c>
