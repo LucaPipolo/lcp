@@ -18,7 +18,8 @@
   "dependencies": {
     "jquery": "^3.1.1",
     "normalize-css": "^5.0.0",
-    "scrollreveal": "^3.3.4"
+    "scrollreveal": "^3.3.4",
+    "fakeLoader": "fakeloader#*"
   },
   "overrides": {
     "jquery": {
@@ -29,6 +30,12 @@
     "scrollreveal": {
       "main": [
         "./dist/scrollreveal.min.js"
+      ]
+    },
+    "fakeLoader": {
+      "main": [
+        "./fakeLoader.min.js",
+        "./fakeLoader.css"
       ]
     },
     "normalize-css": {
