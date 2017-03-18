@@ -5,6 +5,7 @@ var browserSync = require('browser-sync').create();
 var changed = require('gulp-changed');
 var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
+var copy = require('gulp-copy');
 var cslint = require('gulp-cslint');
 var flatten = require('gulp-flatten');
 var gulp = require('gulp');
@@ -176,6 +177,15 @@ var writeToManifest = function(directory) {
 // ## Gulp tasks
 // Run `gulp -T` for a task summary
 
+// ### Copy
+// `gulp copy` - Copies .htaccess file to dist folder.
+gulp.task('copy', function() {
+  return gulp.src('assets/.htaccess')
+  .pipe(copy(path.dist, {prefix: 1}))
+  .pipe(gulp.dest(path.dist))
+  .pipe(browserSync.stream());
+});
+
 // ### Templates
 // `gulp templates` - Compiles, combines, and optimizes Jade files.
 gulp.task('templates', function() {
@@ -292,6 +302,7 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 // build step for that asset and inject the changes into the page.
 // See: http://www.browsersync.io
 gulp.task('watch', function() {
+  gulp.watch([path.source + '.htaccess'], ['copy']);
   gulp.watch([path.source + 'templates/**/*'], ['templates']);
   gulp.watch([path.source + 'styles/**/*'], ['scsslint', 'styles']);
   gulp.watch([path.source + 'scripts/**/*'], ['cslint', 'scripts']);
@@ -304,7 +315,8 @@ gulp.task('watch', function() {
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
-  runSequence('templates',
+  runSequence('copy',
+              'templates',
               'styles',
               'scripts',
               ['fonts', 'images'],
