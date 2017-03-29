@@ -1,5 +1,5 @@
 mixin section(name, description)
-  section(class="section__#{name}")
+  section(class="section__" + name)
     .section__col--left
       h1 #{name}
       h2 #{description}
@@ -32,7 +32,7 @@ mixin skills(...skills)
       .skills__element
         h1 #[span #{skill.value}] #{skill.name}
           .progress-bar
-            .progress-bar--filled.animated(data-percent="#{skill.value}")
+            .progress-bar--filled.animated(data-percent=skill.value)
 
 mixin timeline(...elements)
   .timeline
@@ -55,11 +55,11 @@ mixin contact(...details)
         if detail.link == "false"
           p= detail.description
         else
-          p #[a(href="#{detail.link}") #{detail.description}] 
+          p #[a(href=detail.link) #{detail.description}] 
           
 mixin socials(...socials)
   ul.socials.animated
     each social in socials
       li.social__element
-        a(href="#{social.url}", alt="#{social.name}", target="_blank")
-          i(class="icon-#{social.name}")
+        a(href=social.url, alt=social.name, target="_blank")
+          i(class="icon-" + social.name)

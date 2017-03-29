@@ -12,10 +12,10 @@
       scrollReveal()
       progressBarAnimation()
       return
-    $("#fakeloader'").fakeLoader
+    $("#fakeloader").fakeLoader
       timeToHide: 1500
       spinner: "spinner1"
-      bgColor: "#ff7200'"
+      bgColor: "#ff7200"
     return
   progressBarAnimation = ->
     $animatedElements = $("[class*=\"animated\"]")

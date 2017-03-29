@@ -3,11 +3,11 @@
   "description": "Luca Pipolo portfolio.",
   "main": "index.html",
   "authors": [
-    "Luca Pipolo <pipolo.luca@gmail.com>"
+    "Luca Pipolo <dev@lucapipolo.com>"
   ],
-  "license": "GPL-2.0",
+  "license": "GPL-3.0",
   "homepage": "http://www.lucapipolo.com/",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,9 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.1",
-    "normalize-css": "^5.0.0",
-    "scrollreveal": "^3.3.4",
+    "jquery": "3.1.1",
+    "normalize-css": "5.0.0",
+    "scrollreveal": "3.3.4",
     "fakeLoader": "fakeloader#*"
   },
   "overrides": {
