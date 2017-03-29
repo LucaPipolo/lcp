@@ -1,6 +1,6 @@
 {
   "name": "lcp",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Luca Pipolo portfolio.",
   "main": ".dist/index.html",
   "scripts": {
