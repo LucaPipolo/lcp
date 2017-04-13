@@ -94,6 +94,7 @@ gulp.task('lint:pug', function() {
 gulp.task('compile:pug', function() {
   return gulp.src(options.srcFolder + 'templates/**/!(_)*.pug')
     .pipe(plugins.pug())
+    .pipe(plugins.versionAppend(['js', 'css']))
     .pipe(gulp.dest(options.distFolder))
     .pipe(browserSync.stream());
 });

@@ -1,6 +1,6 @@
 {
   "name": "lcp",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Luca Pipolo portfolio.",
   "main": ".dist/index.html",
   "scripts": {
@@ -43,6 +43,7 @@
     "gulp-sass-lint": "1.3.2",
     "gulp-sourcemaps": "2.4.1",
     "gulp-uglify": "2.1.2",
+    "gulp-version-append": "0.2.0",
     "minimist": "1.2.0",
     "run-sequence": "1.2.2"
   }

@@ -33,3 +33,13 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,NE,R=301]
         BrowserMatch bMSIE !no-gzip !gzip-only-text/html
         Header append Vary User-Agent
 </IfModule>
+
+# Setting cache for images [3 month]
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+  Header set Cache-Control "max-age=7884000, public"
+</filesMatch>
+
+# Setting cache for CSS and JS [2 week]
+<filesMatch ".(css|js)$">
+  Header set Cache-Control "max-age=121000, public"
+</filesMatch>
