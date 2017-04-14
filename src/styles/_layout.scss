@@ -10,7 +10,7 @@
     text-align: left;
   }
 
-  h1 {
+  h1, h2 {
     margin-bottom: 0;
     font-size: 40px;
     font-weight: 400;
@@ -123,12 +123,17 @@ section {
       width: 20%;
     }
 
-    h1, h2 {
+    h2, h3 {
       text-align: left;
 
       @media (min-width: $screen-md-min) {
         text-align: right;
       }
+    }
+
+    h3 {
+      font-weight: normal;
+      color: $gray-dark;
     }
   }
 
@@ -190,7 +195,7 @@ section {
     width: calc(100% / 3 - 40px);
   }
 
-  h1 {
+  h2 {
     margin-top: 0;
     padding: 0;
     color: $orange;
@@ -200,7 +205,7 @@ section {
 .profiles__element {
   display: flex;
 
-  i {
+  span {
     padding-right: 15px;
     color: $gray-dark;
     font-size: 21px;
@@ -229,7 +234,7 @@ section {
     width: calc(100% / 2 - 40px);
   }
 
-  h1 {
+  h2 {
     margin-top: 0;
   }
 
@@ -307,13 +312,17 @@ section {
   min-width: 250px;
   line-height: 10px;
 
-  time, h3 {
+  time, h4, span {
     color: $gray-dark;
     font-size: 10px;
   }
 
-  h1, h2 {
+  h2, h3 {
     line-height: 16px;
+  }
+
+  h3 {
+    font-weight: normal;
   }
 }
 
@@ -386,14 +395,19 @@ section {
       display: block;
       border: 2px solid $gray;
       background-color: $gray;
-      color: $gray-dark;
       line-height: 2.3;
       text-align: center;
+      font-size: 0;
 
       &:hover {
         border: 2px solid $gray;
         background-color: $white;
         color: $orange;
+      }
+
+      span {
+        color: $gray-dark;
+        font-size: 14px;
       }
     }
   }
