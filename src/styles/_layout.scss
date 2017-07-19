@@ -1,5 +1,5 @@
 // =============================================================================
-// # website title
+//    Website Title
 // =============================================================================
 .website__title {
   padding: 0 20px;
@@ -45,7 +45,7 @@
 }
 
 // =============================================================================
-// # header
+//    Header
 // =============================================================================
 header, section {
   display: flex;
@@ -103,7 +103,7 @@ header {
 }
 
 // =============================================================================
-// # sections
+//    Sections
 // =============================================================================
 section {
   &:nth-child(even) .section__col--left {
@@ -155,7 +155,7 @@ section {
 }
 
 // =============================================================================
-// # intro
+//    Intro
 // =============================================================================
 .section__intro {
   p {
@@ -170,7 +170,7 @@ section {
 }
 
 // =============================================================================
-// # expertise & profiles
+//    Expertise and Profiles
 // =============================================================================
 .section__expertise .section__col--right, .section__profiles .section__col--right {
   display: flex;
@@ -218,7 +218,7 @@ section {
 }
 
 // =============================================================================
-// # skills
+//    Skills
 // =============================================================================
 .skills {
   display: flex;
@@ -248,20 +248,20 @@ section {
   width: 100%;
   height: 5px;
   background-color: $gray;
+
+  &--filled {
+    width: 0;
+    height: 100%;
+    background-color: $orange;
+  }
 }
 
 .in-view {
   transition: width 1.4s ease-in-out .5s;
 }
 
-.progress-bar--filled {
-  width: 0;
-  height: 100%;
-  background-color: $orange;
-}
-
 // =============================================================================
-// # experience & education
+//    Experience and Education
 // =============================================================================
 .section__experience .section__col--right {
   padding-bottom: 0;
@@ -335,7 +335,7 @@ section {
 }
 
 // =============================================================================
-// # contact
+//    Contact
 // =============================================================================
 .section__contact {
   .contact__details {
@@ -373,7 +373,7 @@ section {
 }
 
 // =============================================================================
-// # socials
+//    Socials
 // =============================================================================
 .socials {
   display: flex;
@@ -385,30 +385,30 @@ section {
   @media (min-width: $screen-md-min) {
     margin: 0 0 0 auto;
   }
+}
 
-  .social__element {
-    width: 38px;
-    height: 38px;
-    margin-right: 5px;
+.social__element {
+  width: 38px;
+  height: 38px;
+  margin-right: 5px;
 
-    a {
-      display: block;
+  a {
+    display: block;
+    border: 2px solid $gray;
+    background-color: $gray;
+    line-height: 2.3;
+    text-align: center;
+    font-size: 0;
+
+    &:hover {
       border: 2px solid $gray;
-      background-color: $gray;
-      line-height: 2.3;
-      text-align: center;
-      font-size: 0;
+      background-color: $white;
+      color: $orange;
+    }
 
-      &:hover {
-        border: 2px solid $gray;
-        background-color: $white;
-        color: $orange;
-      }
-
-      span {
-        color: $gray-dark;
-        font-size: 14px;
-      }
+    span {
+      color: $gray-dark;
+      font-size: 14px;
     }
   }
 }
